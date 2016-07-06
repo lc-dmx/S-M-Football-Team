@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>球员信息</title>
+
+    <link rel="stylesheet" href="css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/zlight.menu.css" media="screen">
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+    <script src="js/jquery.zlight.menu.1.0.min.js"></script>
+
+    
+    <script type="text/javascript" >
+    	$(document).ready(function() {
+    		$('#example').DataTable( {
+        		"lengthMenu": [[5, 10, 15, 20, -1], [5, 10, 15, 20, "全部"]],
+				"iDisplayLength" : 5,
+                bSort:false
+    		} ); 
+            $('#zlight-nav').zlightMenu();
+		} );
+    </script>
+    
+    <style type="text/css">
+	#example tr:hover{ 
+		background-color: #0FF; //使用CSS伪类达到鼠标移入行变色的效果，比Jquery 的mouseover,hover 好用 
+	} 
+	th{
+		width:16%;
+	}
+    img{
+        width:100px;
+        height:100px;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <div class="container" id="main">
+        <div class="row">
+
+                <nav id="zlight-nav">
+                    <ul id="zlight-main-nav">
+                        <li class="zlight-active zlight-dropdown"><a href="#">Home</a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">管院足球队名单</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">2010届 <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">宋留兵</a></li>
+                                <li><a href="#">侯哥</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">2011届 <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">王博文</a></li>
+                                <li><a href="#">李昂</a></li>
+                                <li><a href="#">符传钦</a></li>
+                                <li><a href="#">罗建航</a></li>
+                                <li><a href="#">冯睿博</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">2012届 <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">刘永强</a></li>
+                                <li><a href="#">王彬</a></li>
+                                <li><a href="#">刘申</a></li>
+                                <li><a href="#">何晓明</a></li>
+                                <li><a href="#">陈冠鸿</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">2013届 <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">李崇</a></li>
+                                <li><a href="#">张正</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">Contact <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">15505164810@163.com</a></li>
+                            </ul>
+                        </li>
+                        <li class="zlight-dropdown">
+                            <a href="#">About <i class="icon-angle-down"></i></a>
+                            <ul class="zlight-submenu">
+                                <li><a href="#">&copy; 2016 lcdmx</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- MOBILE NAV -->
+                    <div id="zlight-mobile-nav">
+                        <span>Menu</span>
+                        <i class="icon-reorder zlight-icon"></i>
+                        <select></select>
+                    </div>
+                </nav> <!-- nav close -->
+
+        </div> 
+    </div> <!-- container close -->
+
+<div class="container">
+
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年级</th>
+                <th>号码</th>
+                <th>信息</th>
+                <th>昵称</th>
+                <th>照片</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>宋留兵</td>
+                <td>2010</td>
+                <td>16</td>
+                <td>讲故事了</td>
+                <td>大哥想你</td>
+                <td><img src="img/16.jpg" alt="宋留兵"/></td>
+            </tr>
+            <tr>
+                <td>李昂</td>
+                <td>2011</td>
+                <td>19</td>
+                <td>我是歪嘴昂</td>
+                <td>LYON</td>
+                <td><img src="img/19.jpg" alt="李昂"/></td>
+            </tr>
+            <tr>
+                <td>王博文</td>
+                <td>2011</td>
+                <td>23</td>
+                <td>我是娘炮</td>
+                <td>WANG BAOWENG</td>
+                <td><img src="img/23.jpg" alt="王博文"/></td>
+            </tr>
+            <tr>
+                <td>符传钦</td>
+                <td>2011</td>
+                <td>17</td>
+                <td>我是巨星</td>
+                <td>Super Star</td>
+                <td><img src="img/17.jpg" alt="符传钦"/></td>
+            </tr>
+            <tr>
+                <td>罗建航</td>
+                <td>2011</td>
+                <td>85</td>
+                <td>职业台球、麻将</td>
+                <td>Boss</td>
+                <td><img src="img/85.jpg" alt="罗建航"/></td>
+            </tr>
+            <tr>
+                <td>冯睿博</td>
+                <td>2011</td>
+                <td>15</td>
+                <td>我是棒子</td>
+                <td>新西兰段子手</td>
+                <td><img src="img/15.jpg" alt="冯睿博"/></td>
+            </tr>
+            <tr>
+                <td>王彬</td>
+                <td>2012</td>
+                <td>22</td>
+                <td>我有大长腿</td>
+                <td>王八</td>
+                <td><img src="img/22.jpg" alt="王彬"/></td>
+            </tr>
+            <tr>
+                <td>刘永强</td>
+                <td>2012</td>
+                <td>7</td>
+                <td>我是小短腿</td>
+                <td>YOUNK</td>
+                <td><img src="img/7.jpg" alt="刘永强"/></td>
+            </tr>
+            <tr>
+                <td>刘申</td>
+                <td>2012</td>
+                <td>21</td>
+                <td>钻石选手</td>
+                <td>gbl</td>
+                <td><img src="img/21.jpg" alt="刘申"/></td>
+            </tr>
+            <tr>
+                <td>何晓明</td>
+                <td>2012</td>
+                <td>4</td>
+                <td>一杯醉，三杯躺</td>
+                <td>闷骚男</td>
+                <td><img src="img/4.jpg" alt="何晓明"/></td>
+            </tr>
+            <tr>
+                <td>陈冠鸿</td>
+                <td>2012</td>
+                <td>5</td>
+                <td>该补补了</td>
+                <td>羊鞭鸿</td>
+                <td><img src="img/5.jpg" alt="陈冠鸿"/></td>
+            </tr>
+            <tr>
+                <td>李崇</td>
+                <td>2013</td>
+                <td>66</td>
+                <td>我很健康</td>
+                <td>。。。</td>
+                <td><img src="img/66.jpg" alt="李崇"/></td>
+            </tr>
+            <tr>
+                <td>张正</td>
+                <td>2013</td>
+                <td>13</td>
+                <td>来玩骰子</td>
+                <td>。。。</td>
+                <td><img src="img/13.jpg" alt="张正"/></td>
+            </tr>
+            <tr>
+                <td>队徽</td>
+                <td>2008-2016</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td><img src="img/队徽.jpg" alt="队徽"/></td>
+            </tr>
+            <tr>
+                <td>队服白</td>
+                <td>2014-2015</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td><img src="img/队服白.jpg" alt="队服白"/></td>
+            </tr>
+            <tr>
+                <td>队服蓝</td>
+                <td>2015-2016</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td><img src="img/队服蓝.jpg" alt="队服蓝"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/respond.min.js"></script>
+</body>
+</html>
